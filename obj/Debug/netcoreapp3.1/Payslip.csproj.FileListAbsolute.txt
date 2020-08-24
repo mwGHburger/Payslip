@@ -1,0 +1,12 @@
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/bin/Debug/netcoreapp3.1/Payslip.deps.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/bin/Debug/netcoreapp3.1/Payslip.runtimeconfig.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/bin/Debug/netcoreapp3.1/Payslip.runtimeconfig.dev.json
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/bin/Debug/netcoreapp3.1/Payslip.dll
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/bin/Debug/netcoreapp3.1/Payslip.pdb
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.csprojAssemblyReference.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.AssemblyInfoInputs.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.AssemblyInfo.cs
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.csproj.CoreCompileInputs.cache
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.dll
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.pdb
+/Users/Michael.Wang/Desktop/MYOB/Reference Kata/Payslip/obj/Debug/netcoreapp3.1/Payslip.genruntimeconfig.cache

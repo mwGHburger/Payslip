@@ -26,12 +26,10 @@ namespace Payslip
 
             Console.Write("Please enter your payment start date: ");
             string startDate = Console.ReadLine();
-            //DateTime startDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine($"DEBUG: startDate is {startDate}");
 
             Console.Write("Please enter your payment end date: ");
             string endDate = Console.ReadLine();
-            //DateTime endDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine($"DEBUG: endDate is {endDate}");
 
             double grossIncome = annualSalary / 12;
@@ -39,22 +37,27 @@ namespace Payslip
             if (annualSalary >= 180001)
             {
                 incomeTax = (54232 + (annualSalary - 180000) * 0.45) / 12;
+                Console.WriteLine("Hit tier 1");
             }
             else if (annualSalary >= 87001)
             {
                 incomeTax = (19822 + (annualSalary - 87000) * 0.37) / 12;
+                Console.WriteLine("Hit tier 2");
             }
             else if (annualSalary >= 37001)
             {
                 incomeTax = (3572 + (annualSalary - 37000) * 0.325) / 12;
+                Console.WriteLine("Hit tier 3");
             }
             else if (annualSalary >= 18201)
             {
                 incomeTax = ((annualSalary - 18200) * 0.19) / 12;
+                Console.WriteLine("Hit tier 4");
             }
             else
             {
                 incomeTax = 0;
+                Console.WriteLine("Hit tier 5");
             }
 
             double netIncome = grossIncome - incomeTax;
@@ -65,9 +68,9 @@ namespace Payslip
             Console.WriteLine($"Name: {name} {surname}");
             Console.WriteLine($"Pay Period: {startDate} - {endDate}");
             Console.WriteLine($"Gross Income: {grossIncome}");
-            Console.WriteLine($"Income Tax: {incomeTax}");
-            Console.WriteLine($"Net Income: {netIncome}");
-            Console.WriteLine($"Super: {super}");
+            Console.WriteLine($"Income Tax: {Math.Round(incomeTax)}");
+            Console.WriteLine($"Net Income: {Math.Round(netIncome)}");
+            Console.WriteLine($"Super: {Math.Round(super)}");
             Console.WriteLine("\nThank you for using MYOB!");
         }
     }

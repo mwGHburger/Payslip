@@ -32,8 +32,41 @@ namespace Payslip
             DateTime endDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine($"DEBUG: endDate is {endDate}");
 
+            double grossIncome = annualSalary / 12;
+            double incomeTax;
+            if (annualSalary >= 180001)
+            {
+                incomeTax = (54232 + (annualSalary - 180000) * 0.45) / 12;
+            }
+            else if (annualSalary >= 87001)
+            {
+                incomeTax = (19822 + (annualSalary - 87000) * 0.37) / 12;
+            }
+            else if (annualSalary >= 37001)
+            {
+                incomeTax = (3572 + (annualSalary - 37000) * 0.325) / 12;
+            }
+            else if (annualSalary >= 18201)
+            {
+                incomeTax = ((annualSalary - 18200) * 0.19) / 12;
+            }
+            else
+            {
+                incomeTax = 0;
+            }
+
+            double netIncome = grossIncome - incomeTax;
+            double super = grossIncome * superRate;
+
             Console.WriteLine("\nYour payslip has been generated: \n");
-            
+
+            Console.WriteLine($"Name: {name} {surname}");
+            Console.WriteLine($"Pay Period: {startDate} - {endDate}");
+            Console.WriteLine($"Gross Income: {grossIncome}");
+            Console.WriteLine($"Income Tax: {incomeTax}");
+            Console.WriteLine($"Net Income: {netIncome}");
+            Console.WriteLine($"Super: {super}");
+            Console.WriteLine("\nThank you for using MYOB!");
         }
     }
 }

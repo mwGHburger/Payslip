@@ -34,6 +34,7 @@ namespace Payslip
             Console.WriteLine($"Super: {Math.Round(super)}");
             Console.WriteLine("\nThank you for using MYOB!");
         }
+        
         private static double calculateGrossIncome(int annualSalary)
         {
             return annualSalary / 12;

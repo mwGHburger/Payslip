@@ -25,11 +25,13 @@ namespace Payslip
             Console.WriteLine($"DEBUG: superRate is {superRate}");
 
             Console.Write("Please enter your payment start date: ");
-            DateTime startDate = Convert.ToDateTime(Console.ReadLine());
+            string startDate = Console.ReadLine();
+            //DateTime startDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine($"DEBUG: startDate is {startDate}");
 
             Console.Write("Please enter your payment end date: ");
-            DateTime endDate = Convert.ToDateTime(Console.ReadLine());
+            string endDate = Console.ReadLine();
+            //DateTime endDate = Convert.ToDateTime(Console.ReadLine());
             Console.WriteLine($"DEBUG: endDate is {endDate}");
 
             double grossIncome = annualSalary / 12;
@@ -56,7 +58,7 @@ namespace Payslip
             }
 
             double netIncome = grossIncome - incomeTax;
-            double super = grossIncome * superRate;
+            double super = grossIncome * superRate / 100;
 
             Console.WriteLine("\nYour payslip has been generated: \n");
 

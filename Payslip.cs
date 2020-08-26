@@ -22,6 +22,18 @@ namespace Payslip
         // METHODS
         public static void Generate()
         {
+            Payslip payslip = GetUserInformation();
+            
+            payslip.GrossIncome = payslip.CalculateGrossIncome(payslip.AnnualSalary);
+            payslip.IncomeTax = payslip.CalculateIncomeTax(payslip.AnnualSalary);
+            payslip.NetIncome = payslip.CalculateNetIncome(payslip.GrossIncome, payslip.IncomeTax);
+            payslip.Super = payslip.CalculateSuper(payslip.GrossIncome, payslip.SuperRate);
+
+            payslip.DisplayResults();
+        }
+
+        private static Payslip GetUserInformation()
+        {
             Console.WriteLine("Welcome to the payslip generator!\n");
             Console.Write("Please input your name: ");
             string name = Console.ReadLine();
@@ -35,17 +47,8 @@ namespace Payslip
             string startDate = Console.ReadLine();
             Console.Write("Please enter your payment end date: ");
             string endDate = Console.ReadLine();
-
-            Payslip payslip = new Payslip(name, surname, annualSalary, superRate, startDate, endDate);
-            
-            payslip.GrossIncome = payslip.CalculateGrossIncome(payslip.AnnualSalary);
-            payslip.IncomeTax = payslip.CalculateIncomeTax(payslip.AnnualSalary);
-            payslip.NetIncome = payslip.CalculateNetIncome(payslip.GrossIncome, payslip.IncomeTax);
-            payslip.Super = payslip.CalculateSuper(payslip.GrossIncome, payslip.SuperRate);
-
-            payslip.DisplayResults();
+            return new Payslip(name, surname, annualSalary, superRate, startDate, endDate);
         }
-
         private void DisplayResults()
         {
             Console.WriteLine("\nYour payslip has been generated: \n");
